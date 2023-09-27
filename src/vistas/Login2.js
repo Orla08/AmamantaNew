@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity, Alert, Safe
 import AsyncStorage from '@react-native-async-storage/async-storage'; 
 import React, { useState } from 'react'
 import axios from 'axios'
-// import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 
 const iconUsuario = require('../../assets/iconos/iconUsuario.png')
@@ -68,7 +68,7 @@ const Login2 = () => {
 
 
     
-// const xx = useNavigation();
+const xx = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
     <View >
@@ -111,8 +111,8 @@ const Login2 = () => {
         </View>
        
 
-        <TouchableOpacity >
-            {/* onPress={() =>{xx.navigate("Registro")}} */}
+        <TouchableOpacity onPress={() =>{xx.navigate("Registro")}}>
+              
                 <Text style={[styles.btnEnlaces,{textDecorationLine: 'underline'}]}>Crear una cuenta</Text>
         </TouchableOpacity>
 

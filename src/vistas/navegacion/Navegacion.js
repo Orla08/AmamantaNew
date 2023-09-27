@@ -17,6 +17,8 @@ import PosicionesAmamantar from "../PosicionesAmamantar.js";
 import TiposDePezon from "../TiposDePezon.js";
 import Cronometro from "../Cronometro.js";
 import Prueba from "../Prueba.js";
+import Login2 from "../Login2.js";
+import Registro from "../Registro.js";
 // import Login from "../Login.js";
 // import Registro from "../Registro.js";
 
@@ -71,8 +73,8 @@ function TabGroup() {
 function SatckGroup() {
     return (
         <Stack.Navigator>
-            {/* <Stack.Screen name="Login" component={Login} options={{ headerShown: false}} />
-            <Stack.Screen name="Registro" component={Registro}options={{ headerShown: false }} /> */}
+             <Stack.Screen name="Login" component={Login2} options={{ headerShown: false}} />
+            <Stack.Screen name="Registro" component={Registro}options={{ headerShown: false }} /> 
             <Stack.Screen name="Home" component={TabGroup} options={{ headerShown: false }} />
             <Stack.Screen name="ConsejosBebe" component={ConsejosBebe} options={{ headerShown: false }} />
             <Stack.Screen name="DescansoBebe" component={DescansoBebe} options={{ headerShown: false }} />

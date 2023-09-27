@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet, TextInput, Pressable, Alert,TouchableOpacity } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
-//import {withNavigation} from 'react-navigation'
-//import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 //import * as Notifications from 'expo-notifications';
 
 class Prueba extends Component {
@@ -106,14 +105,12 @@ class Prueba extends Component {
   render() {
     const { inputHours, inputMinutes, inputSeconds, remainingSeconds, isRunning } = this.state;
     const formattedTime = this.formatTime(remainingSeconds);
-
-    const {navigation} = this.props;
-    
+    const xx = useNavigation();
     // const navegacionb = useNavigation();
     return (
       <View style={styles.container}>
         <View style={styles.containerIntroduccion}>
-          <Pressable style={styles.iconoAtras} onPress={() => { navigation.navigate("Home") }}>
+          <Pressable style={styles.iconoAtras} onPress={() => { xx.navigate("Home") }}>
             <AntDesign name="left" size={24} color="white" />
           </Pressable>
           <Text style={styles.txtBienvenida}>Cronómetro</Text>
@@ -247,4 +244,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default withNavigation(Prueba);
+export default Prueba;
