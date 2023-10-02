@@ -76,7 +76,7 @@ export default function Home() {
                     {/*Introduccion  */}
                         <View>
                                 <TouchableOpacity
-                                onPress={() => { xx.navigate("Introduccion") }}
+                                onPress={() => { xx.navigate("Prueba3") }}
                                 >
                                     <View style={[styles.containerImg]}>
                                         <Image

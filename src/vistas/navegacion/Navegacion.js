@@ -19,12 +19,14 @@ import Cronometro from "../Cronometro.js";
 import Prueba from "../Prueba.js";
 import Login2 from "../Login2.js";
 import Registro from "../Registro.js";
-// import Login from "../Login.js";
-// import Registro from "../Registro.js";
+import Prueba2 from "../Prueba2.js";
+import Temporizador from "../Temporizador.js";
+import Prueba3 from "../Prueba3.js";
+
 
 const iconVideos = require('/Users/iMac10/Documents/GitHub/AmamantaNew/assets/iconos/video.png')
 const iconHome = require('/Users/iMac10/Documents/GitHub/AmamantaNew/assets/iconos/home.png')
-const iconDocumentos= require('/Users/iMac10/Documents/GitHub/AmamantaNew/assets/iconos/documentos.png') 
+const iconDocumentos = require('/Users/iMac10/Documents/GitHub/AmamantaNew/assets/iconos/documentos.png')
 
 
 
@@ -47,49 +49,58 @@ function TabGroup() {
             screenOptions={{ //Opciones de vitsas del tab navigator
                 tabBarActiveTintColor: '#191970' //Cuando se presione por defecto tendra este color
             }}
-            style={{ alignItems: 'center'}}
+            style={{ alignItems: 'center' }}
         >
             <Tab.Screen name="Videos" component={Videos}
-                options={{ headerShown: false, 
-                tabBarShowLabel: false, 
-                tabBarIcon: ({focused}) => (<Image source={iconVideos} style={[{tintColor: focused? '#FAD2E0':'#6A71B9'},{width:28, height:27}]}/>) }} />
-            
+                options={{
+                    headerShown: false,
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused }) => (<Image source={iconVideos} style={[{ tintColor: focused ? '#FAD2E0' : '#6A71B9' }, { width: 28, height: 27 }]} />)
+                }} />
+
             <Tab.Screen name="Inicio" component={Home}
-                options={{ headerShown: false, 
-                tabBarShowLabel: false,
-                tabBarIcon: ({focused}) => (<Image source={iconHome} style={[{tintColor: focused? '#FAD2E0':'#6A71B9'},{width:33, height:30}]}/>) }}/>
-            
+                options={{
+                    headerShown: false,
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused }) => (<Image source={iconHome} style={[{ tintColor: focused ? '#FAD2E0' : '#6A71B9' }, { width: 33, height: 30 }]} />)
+                }} />
+
             <Tab.Screen name="Documentacion" component={Documentacion}
-                options={{ headerShown: false, 
-                tabBarShowLabel: false,
-                tabBarIcon: ({focused}) => (<Image source={iconDocumentos} style={[{tintColor: focused? '#FAD2E0':'#6A71B9'},{width:21, height:29}]}/>) }}/>
+                options={{
+                    headerShown: false,
+                    tabBarShowLabel: false,
+                    tabBarIcon: ({ focused }) => (<Image source={iconDocumentos} style={[{ tintColor: focused ? '#FAD2E0' : '#6A71B9' }, { width: 21, height: 29 }]} />)
+                }} />
         </Tab.Navigator>
     )
 }
 
 // //Stack
- const Stack = createNativeStackNavigator(); //Instanciamos la clase createNativeStackNavigator en Tab
+const Stack = createNativeStackNavigator(); //Instanciamos la clase createNativeStackNavigator en Tab
 
 function SatckGroup() {
     return (
         <Stack.Navigator>
-             <Stack.Screen name="Login" component={Login2} options={{ headerShown: false}} />
-            <Stack.Screen name="Registro" component={Registro}options={{ headerShown: false }} /> 
             <Stack.Screen name="Home" component={TabGroup} options={{ headerShown: false }} />
+            <Stack.Screen name="Login" component={Login2} options={{ headerShown: false }} />
+            <Stack.Screen name="Registro" component={Registro} options={{ headerShown: false }} />
             <Stack.Screen name="ConsejosBebe" component={ConsejosBebe} options={{ headerShown: false }} />
             <Stack.Screen name="DescansoBebe" component={DescansoBebe} options={{ headerShown: false }} />
             <Stack.Screen name="Introduccion" component={Introduccion} options={{ headerShown: false }} />
             <Stack.Screen name="LactanciaMaterna" component={LactanciaMaterna} options={{ headerShown: false }} />
             <Stack.Screen name="LQPETC" component={LQPETC} options={{ headerShown: false }} />
-            <Stack.Screen name="BeneficiosLactancia" component={BeneficiosLactancia} options={{ headerShown: false }} /> 
-            <Stack.Screen name="CambiosDeLeche" component={CambiosDeLeche} options={{ headerShown: false }} /> 
-            <Stack.Screen name="PosicionesAmamantar" component={PosicionesAmamantar} options={{ headerShown: false }} /> 
+            <Stack.Screen name="BeneficiosLactancia" component={BeneficiosLactancia} options={{ headerShown: false }} />
+            <Stack.Screen name="CambiosDeLeche" component={CambiosDeLeche} options={{ headerShown: false }} />
+            <Stack.Screen name="PosicionesAmamantar" component={PosicionesAmamantar} options={{ headerShown: false }} />
             <Stack.Screen name="TiposDePezon" component={TiposDePezon} options={{ headerShown: false }} />
             <Stack.Screen name="Cronometro" component={Cronometro} options={{ headerShown: false }} />
             <Stack.Screen name="Prueba" component={Prueba} options={{ headerShown: false }} />
-            
+            <Stack.Screen name="Prueba2" component={Prueba2} options={{ headerShown: false }} />
+            <Stack.Screen name="Prueba3" component={Prueba3} options={{ headerShown: false }} />
+            <Stack.Screen name="Temporizador" component={Temporizador} options={{ headerShown: false }} />
+
         </Stack.Navigator>
     )
-} 
+}
 
 
